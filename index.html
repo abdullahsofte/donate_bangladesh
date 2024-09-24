@@ -1,51 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate Bangladesh</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Donate Bangladesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"/>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body>
-    <!-- header section -->
-    <header>
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-             <a href="#">Blog</a>
-            </div>
-            <div class="navbar-center">
-                <a class="btn btn-ghost text-xl"><img src="./images/logo.png" alt=""></a>
-            </div>
-            <div class="navbar-end">
-               <img src="./images/coin.png" alt="">
-               <span>5000 BDT</span>
-            </div>
+  </head>
+  <body class="bg-base-100">
+    <!-- Header part start -->
+    <header class="fixed z-10 w-full top-0 bg-white">
+      <nav class="bg-[#F9F7F3]">
+        <div class="navbar w-3/4 m-auto ">
+          <div class="navbar-start">
+            <a href="blog.html" class="btn btn-ghost text-lg font-semibold bg-[#B4F461] text-black border-none hover:bg-[#A9E15A]">Blog</a>
+          </div>
+          <div class="navbar-center flex items-center">
+            <a class="text-2xl font-bold text-gray-800">
+              <img src="asstes/logo.png" alt="Donation Bangladesh Logo" class="h-10 inline mr-2" />
+              Donation Bangladesh
+            </a>
+          </div>
+          <div class="navbar-end flex items-center space-x-2">
+            <img src="asstes/coin.png" alt="Coin Icon" class="h-6" />
+            <span class="font-semibold text-gray-700" id="amount-blance">5500 </span> <span>BDT</span>
+          </div>
         </div>
+      </nav>
+      <div class="flex justify-center w-3/4 m-auto pb-8 pt-12">
+        <button id="show-donation-content-btn" class="btn btn-outline btn-primary mx-2">
+          Donation
+        </button>
+        <button id="show-history-content-btn" class="btn btn-outline btn-secondary mx-2">
+          History
+        </button>
+      </div>
     </header>
-    <!-- header section -->
-    <!-- main section -->
-    <main>
-        <div class="hero min-h-screen">
-            <div class="hero-content flex-col lg:flex-row">
-                <img src="./images/noakhali.png" class="max-w-sm rounded-lg" />
-                <div>
-                    <h1 class="text-3xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
-                    <p class="py-6">
-                        The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
-                    </p>
-                    <input type="text"  placeholder="Write Donation Amount" id="donate-amount" class="input input-bordered w-full mb-2" />
-                    
-                    <button class="btn btn-primary w-full">Donate Now</button>
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- main section -->
-<script src="./js/main.js"></script>
-</body>
+    <!-- Header part end -->
 
+    <!-- Main body part -->
+    <main class="pt-30 lg:pt-32 mt-20">
+      <!-- Donation content -->
+      <div id="donation-content" class="w-3/4 m-auto space-y-10">
+        <!-- Card 1 -->
+        <div class="hero bg-white shadow-lg border border-gray-200 rounded-lg p-6">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="asstes/noakhali.png" class="max-w-sm rounded-lg shadow-md" alt="Noakhali Flood Image"/>
+            <div class="ml-6">
+              <button class="btn btn-warning mb-4">
+                <img src="asstes/coin.png" alt="Coin Icon" class="h-6 mr-2" />
+                <div class="badge badge-lg"> <span id="donation-balence"> 500 </span> &nbsp; BDT</div>
+              </button>
+              <h1 class="text-2xl font-bold mb-4" id="donation-title">
+                Donate for Flood at Noakhali, Bangladesh
+              </h1>
+              <p class="text-gray-700 mb-4">
+                The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a difference.
+              </p>
+              <input id="donate-input-feild" type="text" placeholder="Enter Donation Amount" class="input input-bordered w-full mb-4" />
+              <button id="donate-now" class="btn btn-primary w-full bg-[#B4F461] text-black border-none hover:bg-[#A9E15A]">
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="hero bg-white shadow-lg border border-gray-200 rounded-lg p-6">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="asstes/feni.png" class="max-w-sm rounded-lg shadow-md" alt="Feni Flood Image"/>
+            <div class="ml-6">
+              <button class="btn btn-warning mb-4">
+                <img src="asstes/coin.png" alt="Coin Icon" class="h-6 mr-2" />
+                <div class="badge badge-lg"><span id="donation-balence"> 500 </span> &nbsp; BDT</div>
+              </button>
+              <h1 class="text-2xl font-bold mb-4">
+                Donate for Flood Relief in Feni, Bangladesh
+              </h1>
+              <p class="text-gray-700 mb-4">
+                The recent floods in Feni have caused significant damage. Your donation will help provide essential supplies and support relief efforts. Join us in making a positive impact on those in need.
+              </p>
+              <input type="text" placeholder="Enter Donation Amount" class="input input-bordered w-full mb-4" />
+              <button class="btn btn-primary w-full bg-[#B4F461] text-black border-none hover:bg-[#A9E15A]">
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="hero bg-white shadow-lg border border-gray-200 rounded-lg p-6">
+          <div class="hero-content flex-col lg:flex-row">
+            <img src="asstes/quota-protest.png" class="max-w-sm rounded-lg shadow-md" alt="Quota Protest Image"/>
+            <div class="ml-6">
+              <button class="btn btn-warning mb-4">
+                <img src="asstes/coin.png" alt="Coin Icon" class="h-6 mr-2" />
+                <div class="badge badge-lg"><span id="donation-balence"> 500 </span> &nbsp; BDT</div>
+              </button>
+              <h1 class="text-2xl font-bold mb-4">
+                Aid for Injured in the Quota Movement
+              </h1>
+              <p class="text-gray-700 mb-4">
+                The Quota movement has resulted in injuries for many. Your support is essential in providing medical care and supplies to those affected. Every donation helps them in their recovery process.
+              </p>
+              <input type="text" placeholder="Enter Donation Amount" class="input input-bordered w-full mb-4" />
+              <button class="btn btn-primary w-full bg-[#B4F461] text-black border-none hover:bg-[#A9E15A]">
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- History content -->
+      <div id="history-content" class="hidden w-3/4 m-auto space-y-4 mt-8">
+        <div tabindex="0" class="collapse collapse-open bg-gray-100 border border-gray-300 p-4 rounded-lg">
+          <div class="collapse-title text-xl font-medium" id="donate_title_get">
+            
+          </div>
+          <div class="collapse-content">
+           <span id="dateTime"></span>
+          </div>
+        </div>
+     
+      </div>
+    </main>
+    <!-- Main body part end -->
+
+    <!-- Footer part start -->
+    <footer class="bg-base-100 py-4">
+      <div class="w-3/4 m-auto text-center">
+        <p>&copy; 2024 Donate Bangladesh. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Footer part end -->
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
