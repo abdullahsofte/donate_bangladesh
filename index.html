@@ -30,9 +30,9 @@
         </div>
       </div>
     </nav>
-    
+
     <div class="flex justify-center w-3/4 m-auto pb-8 pt-12">
-      <button id="show-donation-content-btn" class="btn btn-outline btn-primary mx-2">
+      <button id="show-donation-content-btn" class="btn btn-primary mx-2">
         Donation
       </button>
       <button id="show-history-content-btn" class="btn btn-outline btn-secondary mx-2">
@@ -47,10 +47,24 @@
   <!-- Main body part -->
   <main class="pt-30 lg:pt-32 mt-20">
 
+    <!-- modal part -->
+    <div class="modal-box fixed lg:ml-[35%] md:ml-[200px] sm:ml-0 mt-4 z-10 hidden bg-[#b4f461] p-6 max-w-lg w-full shadow-lg rounded-lg" id="modal">
+      <h3 class="text-3xl font-bold text-center text-yellow-900">Congratulations!</h3>
+      <div class="flex justify-center mt-4">
+        <img class="w-10" src="./asstes/coin.png" alt="Coin Image">
+      </div>
+      <p class="py-4 font-medium text-center text-gray-800" id="popup-title"></p>
+      <h2 class="text-2xl font-bold text-center text-yellow-800">Successfully</h2>
+      <div class="flex justify-center mt-4">
+        <button class="btn bg-yellow-700 text-white hover:bg-yellow-600" id="modal-close">Close Confirmation</button>
+      </div>
+    </div>
+    
+    <!-- modal part -->
 
     <!-- Donation content -->
     <div id="donation-content" class="w-3/4 m-auto space-y-10">
-      <!-- Card 1 -->
+
       <div class="hero bg-white shadow-lg border border-gray-200 rounded-lg p-6">
         <div class="hero-content flex-col lg:flex-row">
           <img src="asstes/noakhali.png" class="w-full max-w-sm rounded-lg shadow-md" alt="Noakhali Flood Image" />
@@ -72,7 +86,6 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="hero bg-white shadow-lg border border-gray-200 rounded-lg p-6">
         <div class="hero-content flex-col lg:flex-row">
           <img src="asstes/feni.png" class="w-full max-w-sm rounded-lg shadow-md" alt="Feni Flood Image" />
@@ -94,7 +107,6 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="hero bg-white shadow-lg border border-gray-200 rounded-lg p-6">
         <div class="hero-content flex-col lg:flex-row">
           <img src="asstes/quota-protest.png" class="w-full max-w-sm rounded-lg shadow-md" alt="Quota Protest Image" />
@@ -135,6 +147,10 @@
     </div>
   </footer>
   <!-- Footer part end -->
+
+
+
+
 
 
   <script src="./js/main.js"></script>
